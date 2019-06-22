@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Framework.Singleton;
+using Framework.UIFramework.Enum;
 
 namespace Framework.UIFramework
 {

@@ -1,4 +1,5 @@
 using Framework.Singleton;
+using Framework.UIFramework.Enum;
 using UIWndScripts;
 
 namespace Framework.UIFramework
@@ -9,10 +10,5 @@ namespace Framework.UIFramework
         {
             UIMgr.Instance.UIBinder(UIWndName.MainUI, new MainWnd());
         }
-    }
-
-    public enum UIWndName
-    {
-        MainUI,
     }
 }

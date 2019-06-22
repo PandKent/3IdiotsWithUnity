@@ -1,6 +1,7 @@
 using System;
 using Framework.Singleton;
 using Framework.UIFramework;
+using Framework.UIFramework.Enum;
 
 namespace Singleton
 {
