@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Kent\.Rider2019.1\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Kent\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_Snake_lerp.-1005684372.00" t="ExcludeRecursive" />
+    <e p="E:\Work\Snake_lerp" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="Die.cs" t="Include" />
+          <e p="FoodMaker.cs" t="Include" />
+          <e p="Framework" t="Include">
+            <e p="Singleton" t="Include">
+              <e p="TSingleton.cs" t="Include" />
+            </e>
+            <e p="UIFramework" t="Include">
+              <e p="UIMgr.cs" t="Include" />
+              <e p="UIRegister.cs" t="Include" />
+              <e p="UIWnd.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Game" t="Include">
+            <e p="Main.cs" t="Include" />
+          </e>
+          <e p="MainUI.cs" t="Include" />
+          <e p="Manager" t="Include">
+            <e p="GameMgr.cs" t="Include" />
+          </e>
+          <e p="ShMove.cs" t="Include" />
+          <e p="SnakeBody.cs" t="Include" />
+          <e p="StartUI.cs" t="Include" />
+          <e p="Test.cs" t="Include" />
+          <e p="UIWnd" t="Include">
+            <e p="MainWnd.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Snake_lerp.sln" t="IncludeFlat" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
