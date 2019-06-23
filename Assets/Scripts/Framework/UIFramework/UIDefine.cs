@@ -31,7 +31,7 @@ public class UIDefine:TSingleton<UIDefine>
         }
     }
 
-    public GameObject getWndPrefab(UIWndName wnd)
+    public GameObject GetWndPrefab(UIWndName wnd)
     {
         if (defineDic.ContainsKey(wnd))
             return defineDic[wnd].prefab;
@@ -39,7 +39,7 @@ public class UIDefine:TSingleton<UIDefine>
             return null;
     }
         
-    public WndDefine getWndDefine(UIWndName wnd)
+    public WndDefine GetWndDefine(UIWndName wnd)
     {
         if (defineDic.ContainsKey(wnd))
             return defineDic[wnd];
