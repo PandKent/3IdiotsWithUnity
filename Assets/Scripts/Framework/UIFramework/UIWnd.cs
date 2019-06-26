@@ -1,11 +1,14 @@
 
+using Framework.UIFramework.Enum;
+using UnityEngine;
+
 namespace Framework.UIFramework
 {
-    public interface UIWnd
+    public abstract class UIWnd:MonoBehaviour
     {
-        string WndName();
-        void OnBeforOpen(params object[] data);
-        void OnOpen(params object[] data);
-        void OnClose(params object[] data);
+        public abstract UIWndName WndName();
+        public abstract void OnBeforOpen(params object[] data);
+        public abstract void OnOpen(params object[] data);
+        public abstract void OnClose(params object[] data);
     }
 }

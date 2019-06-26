@@ -1,25 +1,26 @@
 using Framework.UIFramework;
+using Framework.UIFramework.Enum;
 
 namespace UIWndScripts
 {
     public class MainWnd:UIWnd
     {
-        public string WndName()
+        public override UIWndName WndName()
         {
-            return "MainWnd";
+            return UIWndName.MainUI;
         }
 
-        public void OnBeforOpen(params object[] data)
-        {
-            
-        }
-
-        public void OnOpen(params object[] data)
+        public override void OnBeforOpen(params object[] data)
         {
             
         }
 
-        public void OnClose(params object[] data)
+        public override void OnOpen(params object[] data)
+        {
+            
+        }
+
+        public override void OnClose(params object[] data)
         {
             
         }

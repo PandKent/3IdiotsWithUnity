@@ -8,7 +8,7 @@ namespace Framework.UIFramework
     {
         public void RegisterUI()
         {
-            UIMgr.Instance.UIBinder(UIWndName.MainUI, new MainWnd());
+//            UIMgr.Instance.UIBinder(UIWndName.MainUI, new MainWnd());
         }
     }
 }

@@ -18,8 +18,15 @@ public class UIDefine:TSingleton<UIDefine>
 {
     public WndDefine[] wnds;
     private Dictionary<UIWndName,WndDefine> defineDic = new Dictionary<UIWndName, WndDefine>();
+
+    private void prepare()
+    {
+        
+    }
+    
     public void Awake()
     {
+        UIDefine.Instance.prepare();
         if (wnds!=null)
         {
             for (int i = 0; i < wnds.Length; i++)
