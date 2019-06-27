@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FoodMaker : MonoBehaviour
 {
@@ -20,7 +21,9 @@ public class FoodMaker : MonoBehaviour
 
     public GameObject foodPrefab;
     private Transform foodHolder;
+    public Sprite[] foodSprites=new Sprite[10];
     // public GameObject temp;
+    
     void Awake()
     {
         _instance = this;
@@ -50,18 +53,22 @@ public class FoodMaker : MonoBehaviour
 
         GameObject Food = Instantiate(foodPrefab);
         Food.transform.SetParent(foodHolder,false);
+        Food.GetComponent<Image>().sprite = foodSprites[Random.Range(0, 10)];
+        foodHolder.SetAsLastSibling();
+
 
         //step = GameObject.Find("YellowSh").GetComponent<ShMove>().step;
-        //y = Random.Range(-5, 5);
-        //x = Random.Range(-6, 11);
         do
         {
             tempy = Random.Range(-5, 5);
             tempx = Random.Range(-6, 11);
         }
-        while ((Mathf.Abs(tempx - x) <= 1) | (Mathf.Abs(tempy - y) <= 1));
+        while ((x == tempx) & (y == tempy));
+     
 
-        
+
+
+
         x = tempx;
         y = tempy;
 

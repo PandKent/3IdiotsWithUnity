@@ -6,11 +6,9 @@ using UnityEngine.UI;
 public class ShMove : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float step;
-    public float velocity;//repeting时间间隔，越小速度越快
+    public int step;
     float x;
     float y;
-    float delTime;
     
     Vector3 shPos,bodyPos;
     //Vector3 tempVector;
@@ -20,9 +18,7 @@ public class ShMove : MonoBehaviour
     public List<Transform> bodylist = new List<Transform>();
     public List<Vector3> headList = new List<Vector3>();  
     int len;//body长度
-    int movecount;//记录帧数
-    int smooth;//速度，可取2或5，保证movebuf为整数
-    int movebuf;//蛇头移动帧数缓存
+    int speed;//速度
     Transform canvas;
     GameObject body;
     public GameObject dieLog;
@@ -42,20 +38,15 @@ public class ShMove : MonoBehaviour
     void Awake()
     {
         step = 30;
-        velocity = 0.1f;
         canvas = GameObject.Find("Canvas").transform;
         //Head = GameObject.Find("YellowSh")
         x = 0;
         y = step;
         len = 0;
-        movecount = 0;
-        smooth = 5;
-        delTime = 0.02f;
-        //movebuf = 25;
-        movebuf = (int)(1 / (smooth * delTime));
+        speed = 8;
         bodylist.Clear();
         headList.Clear();
-        Debug.Log(movecount);
+
 
 
     }
@@ -97,6 +88,7 @@ public class ShMove : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             x = 0; y = step;
+            
             gameObject.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
         }
         if (Input.GetKey(KeyCode.S))
@@ -115,60 +107,35 @@ public class ShMove : MonoBehaviour
             gameObject.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 270));
         }
         Move();
-
-        //if (Time.frameCount % 5 == 0)
-        //{
-        //    Move();
-        //}
-        //Move();
     }
 
 
     void Move()
     {
-        bdMove();
         shPos = gameObject.transform.localPosition;
-
-        //gameObject.transform.localPosition = new Vector3(shPos.x + x, shPos.y + y, shPos.z);
-        //卡顿移动 
-        //gameObject.transform.localPosition = shPos + new Vector3(x, y, 0);
-        //平滑移动vector2.lerp;
-        gameObject.transform.localPosition = Vector3.Lerp(shPos, shPos + new Vector3(x, y, 0), smooth  * Time.deltaTime);
-        
-        headList.Add(gameObject.transform.localPosition);
-        if (movecount < movebuf * (len + 1))
-        {
-            movecount++;
-
-            
-        }
-        else
-        {
-            headList.RemoveAt(0);
-            
-                
-            
-        }
- 
+        gameObject.transform.localPosition = Vector3.Lerp(shPos, shPos + new Vector3(x, y, 0), speed  * Time.deltaTime);
+        bdMove();
     }
     public void bdMove()
     {
 
-        //蛇尾移动到蛇头
-        //bodylist[len - 1].localPosition = shPos;
-        //bodylist.Insert(0, bodylist[len - 1]);
-        //bodylist.RemoveAt(len);
-        //逐个结点移动
-
         if (len > 0)
         {
-            for (int i = 0; i < len; i++)
+            
+            bodylist[0].localPosition = Vector3.Lerp(bodylist[0].localPosition, shPos, speed * Time.deltaTime);
+            if (len > 1)
             {
 
-                bodylist[i].localPosition = headList[movecount - (i+1) * movebuf];
+                for (int i = 0; i < len - 1; i++)
+                {
+
+                    bodylist[i + 1].localPosition = Vector3.Lerp(bodylist[i + 1].localPosition, bodylist[i].localPosition, speed * Time.deltaTime);
+
+                }
 
             }
         }
+        
             
 
 
@@ -215,25 +182,34 @@ public class ShMove : MonoBehaviour
         len = bodylist.Count;
         if (len==1)
         {
-            body.tag="Untagged";
-            
+           
+            bodylist[0].localPosition = shPos;
+
+
+        }
+        if (len < 3)
+        {
+            body.tag = "Untagged";
+        }
+
+        //headList.Add(shPos);
+        if (len>1)
+        {
+
+            bodylist[len - 1].localPosition = bodylist[len - 2].localPosition;
+
         }
 
 
 
-
-        //Debug.Log("Grow"+"长度："+len);
-        //Debug.Log(body.transform.localPosition);
+       
     }
     void Die()
     {
-        //CancelInvoke();
-        //dieLog = Instantiate(dieLogPre);
-        //dieLog.transform.SetParent(canvas, false);
 
-        //dieLog.GetComponent<Button>().onClick.AddListener(Home);
         Time.timeScale = 0;
         dieLog.SetActive(true);
+        dieLog.transform.SetAsLastSibling();
         if (MainUI.Instance.tempscore > PlayerPrefs.GetInt("bestscore",0))
         {
             PlayerPrefs.SetInt("bestscore", MainUI.Instance.tempscore);
@@ -241,12 +217,8 @@ public class ShMove : MonoBehaviour
 
         PlayerPrefs.SetInt("lastscore", MainUI.Instance.tempscore);
 
-        //bodylist.Clear();
-        //headList.Clear();
+
     }
-    //void Home()
-    //{
-    //    UnityEngine.SceneManagement.SceneManager.LoadScene(0);
-    //}
+
 
 }
