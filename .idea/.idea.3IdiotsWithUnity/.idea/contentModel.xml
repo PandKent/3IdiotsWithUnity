@@ -33,6 +33,12 @@
           </e>
           <e p="ShMove.cs" t="Include" />
           <e p="SnakeBody.cs" t="Include" />
+          <e p="SnakeExample" t="Include">
+            <e p="Node1.cs" t="Include" />
+            <e p="SnakeCtrol.cs" t="Include" />
+            <e p="SnakeNode1.cs" t="Include" />
+            <e p="SnakeView.cs" t="Include" />
+          </e>
           <e p="StartUI.cs" t="Include" />
           <e p="Test.cs" t="Include" />
           <e p="UIWnd" t="Include">
