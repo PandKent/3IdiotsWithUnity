@@ -17,9 +17,9 @@ namespace Framework.UIFramework.Enum
     
     public enum WndLayer
     {
-        BackGround,
-        Scene,
-        Window,
-        PopUp,
+        Scene = 0,
+        BackGround = 1,
+        Window = 2,
+        PopUp = 3,
     }
 }
