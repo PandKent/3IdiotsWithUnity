@@ -77,36 +77,52 @@ namespace Framework.UIFramework
 
         private void OnDestroy()
         {
-            CloseAllWnd();
+            //CloseAllWnd();
         }
 
         private void OpenProcess()
         {
-            if (m_waitForOpen.Count == 0)
-            {
-                return;
-            }
-            
-            UIWnd wnd = m_waitForOpen.Dequeue();
-            object data = m_wndPassData.Dequeue();
-            m_wndCtrls.Add(wnd.WndName(),wnd);
-            wnd.OnBeforOpen(data);
-//            wnd.gameObject.SetActive(true);//数据加载成功后，显示界面 目前均为同步加载模式，后期改异步
-            wnd.OnOpen(data);
-
             if (m_waitForClose.Count > 0)
             {
                 var go = m_waitForClose.Dequeue();
                 go.OnClose();
-                Destroy(go.gameObject);
+//                go.gameObject.SetActive(false);
+                DestroyImmediate(go.gameObject);
             }
+            
+            if (m_waitForOpen.Count == 0)
+            {
+                return;
+            }
+
+            UIWnd wnd;
+            object data;
+
+            if (m_waitForOpen.Count == 0)
+            {
+                return;
+            }
+
+            if (m_wndPassData.Count == 0)
+            {
+                return;
+            }
+            wnd = m_waitForOpen.Dequeue();
+            data = m_wndPassData.Dequeue();
+            wnd.OnBeforOpen(data);
+            //wnd.gameObject.SetActive(true);//数据加载成功后，显示界面 目前均为同步加载模式，后期改异步
+            wnd.OnOpen(data);
+
+            
         }
 
         private void CreateProcess(UIWndName wnd)
         {
             if(UIDefine.Instance.GetWndDefine(wnd)==null)
                 return;
-            WndDefine opening = UIDefine.Instance.GetWndDefine(wnd);
+            if(m_wndCtrls.ContainsKey(wnd))//不允许重复打开界面
+                return;
+            WndDefine opening = UIDefine.Instance.GetWndDefine(wnd);//从配置内取出其对应配置
 
             if(m_wndCtrls.Count <= 0)
             {
@@ -125,6 +141,15 @@ namespace Framework.UIFramework
                         recT.anchorMin = Vector3.zero;
                         recT.offsetMin = new Vector2(0,0);
                         recT.offsetMax = new Vector2(0,0);
+                        
+                        m_waitForOpen.Enqueue(go.GetComponent<UIWnd>());
+//                        m_wndPassData.Enqueue(data);
+                        if (m_wndCtrls.ContainsKey(wnd))
+                        {
+                            m_wndCtrls[wnd] = go.GetComponent<UIWnd>();
+                            return;
+                        }
+                        m_wndCtrls.Add(wnd,go.GetComponent<UIWnd>());
                     }
                     else
                     {
@@ -142,7 +167,7 @@ namespace Framework.UIFramework
                     //如果冲突则将当前打开的窗口推入待关闭列表
                     if (opening.exclusion == opened.exclusion)
                     {
-                        m_waitForClose.Enqueue(UIDefine.Instance.GetWndPrefab(opened.wnd).GetComponent<UIWnd>());
+                        m_waitForClose.Enqueue(m_wndCtrls[opened.wnd]);
                     }
 
                     if (opening.prefab != null)
@@ -160,14 +185,27 @@ namespace Framework.UIFramework
                             recT.anchorMin = Vector3.zero;
                             recT.offsetMin = new Vector2(0,0);
                             recT.offsetMax = new Vector2(0,0);
+                            
+                            m_waitForOpen.Enqueue(go.GetComponent<UIWnd>());
+//                        m_wndPassData.Enqueue(data);
+                            if (m_wndCtrls.ContainsKey(wnd))
+                            {
+                                m_wndCtrls[wnd] = go.GetComponent<UIWnd>();
+                                return;
+                            }
+                            m_wndCtrls.Add(wnd,go.GetComponent<UIWnd>());
                         }
                         else
                         {
                             Debug.LogError(string.Format("Can Not Found This UI's Layer  [UI][{0}]",opening.wnd.ToString()));
                         }
                     }
-                    
                 }
+
+//                foreach (UIWnd uiWnd in m_waitForClose)
+//                {
+//                    m_wndCtrls.Remove(uiWnd.WndName());
+//                }
             }
         }
 
@@ -184,8 +222,14 @@ namespace Framework.UIFramework
             if(UIDefine.Instance.GetWndDefine(wnd)==null)
                 return;
             CreateProcess(wnd);
-            m_waitForOpen.Enqueue(UIDefine.Instance.GetWndPrefab(wnd).GetComponent<UIWnd>());
+//            m_waitForOpen.Enqueue(UIDefine.Instance.GetWndPrefab(wnd).GetComponent<UIWnd>());
             m_wndPassData.Enqueue(data);
+//            if (m_wndCtrls.ContainsKey(wnd))
+//            {
+//                m_wndCtrls[wnd] = m_waitForOpen.Peek();
+//                return;
+//            }
+//            m_wndCtrls.Add(wnd,m_waitForOpen.Peek());
         }
 
         public void CloseAllWnd()
@@ -196,7 +240,7 @@ namespace Framework.UIFramework
             }
             foreach (KeyValuePair<UIWndName,UIWnd> wnd in m_wndCtrls)
             {
-                Destroy(wnd.Value.gameObject);
+                DestroyImmediate(wnd.Value.gameObject);
             }
             m_wndCtrls.Clear();
             m_waitForClose.Clear();
@@ -206,8 +250,10 @@ namespace Framework.UIFramework
         {
             if (m_wndCtrls.ContainsKey(wndName))
             {
-                m_wndCtrls[wndName].OnClose(data);
+                m_waitForClose.Enqueue(m_wndCtrls[wndName]);
+//                m_wndCtrls[wndName].OnClose(data);
                 m_wndCtrls.Remove(wndName);
+                
             }
         }
     }

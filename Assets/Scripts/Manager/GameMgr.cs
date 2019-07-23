@@ -16,6 +16,7 @@ namespace Singleton
         private void Init()
         {
             UIMgr.Instance.OpenWnd(UIWndName.MainUI);
+            UIMgr.Instance.OpenWnd(UIWndName.MainUI1);
         }
 
         private void Awake()

@@ -3,6 +3,7 @@ namespace Framework.UIFramework.Enum
     public enum UIWndName
     {
         MainUI,
+        MainUI1,
     }
     
     public enum WndExclusion
