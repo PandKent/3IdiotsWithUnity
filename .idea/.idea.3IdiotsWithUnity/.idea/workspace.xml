@@ -2,22 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="240ec7d0-a224-4b51-ad58-79d381c88929" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Framework/ObjectPool.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Framework/ObjectPool/ObjectPool.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Framework/ObjectPool/ObjectPool.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Framework/ResourceLoader/ResLoader.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Framework/ResourceLoader/ResMgr.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.3IdiotsWithUnity/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.3IdiotsWithUnity/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.3IdiotsWithUnity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.3IdiotsWithUnity/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Framework/UIFramework/ResourceLoader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Framework/ResourceLoader.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Framework/UIFramework/ResourceLoader/IRes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Framework/ResourceLoader/IRes.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Framework/UIFramework/ResourceLoader/IRes.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Framework/ResourceLoader/IRes.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Framework/UIFramework/ResourceLoader/ResLoader.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Framework/UIFramework/ResourceLoader/ResLoader.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Framework/ResourceLoader/ResLoader.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Framework/UIFramework/ResourceLoader/ResMgr.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Framework/UIFramework/ResourceLoader/ResMgr.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Framework/ResourceLoader/ResMgr.cs.meta" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Framework/ResourceLoader/ResLoader.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+            <state relative-caret-position="555">
+              <caret line="38" column="1" lean-forward="true" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
               <folding>
                 <marker date="1564553056283" expanded="false" signature="6:47" ph="..." />
                 <marker date="1564553056283" expanded="true" signature="80:975" ph="{...}" />
@@ -45,11 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Framework/ObjectPool/ObjectPool.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="123" lean-forward="true" selection-start-line="123" selection-end-line="123" />
+            <state relative-caret-position="596">
+              <caret line="130" column="53" lean-forward="true" selection-start-line="130" selection-start-column="53" selection-end-line="130" selection-end-column="53" />
               <folding>
                 <marker date="1565252408169" expanded="false" signature="6:79" ph="..." />
                 <marker date="1565252408169" expanded="true" signature="111:3482" ph="{...}" />
@@ -88,8 +74,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Framework/ResourceLoader/ResMgr.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+            <state relative-caret-position="345">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
               <folding>
                 <marker date="1564458919641" expanded="false" signature="6:60" ph="..." />
                 <marker date="1564458919641" expanded="true" signature="93:1023" ph="{...}" />
@@ -430,12 +416,12 @@
       <workItem from="1563781821676" duration="27981000" />
       <workItem from="1564454927575" duration="3907000" />
       <workItem from="1564549300160" duration="4311000" />
-      <workItem from="1565250699282" duration="3370000" />
+      <workItem from="1565250699282" duration="4876000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60554000" />
+    <option name="totallyTimeSpent" value="62060000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -621,23 +607,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Framework/ResourceLoader/ResMgr.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-          <folding>
-            <marker date="1564458919641" expanded="false" signature="6:60" ph="..." />
-            <marker date="1564458919641" expanded="true" signature="93:1023" ph="{...}" />
-            <marker date="1564458919641" expanded="true" signature="138:1021" ph="{...}" />
-            <marker date="1564458919641" expanded="true" signature="473:518" ph="{...}" />
-            <marker date="1564458919641" expanded="true" signature="621:672" ph="{...}" />
-            <marker date="1564458919641" expanded="true" signature="805:850" ph="{...}" />
-            <marker date="1564458919641" expanded="true" signature="881:914" ph="{...}" />
-            <marker date="1564458919641" expanded="true" signature="982:1015" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Framework/ResourceLoader/IRes.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -764,26 +733,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Framework/ResourceLoader/ResLoader.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
-          <folding>
-            <marker date="1564553056283" expanded="false" signature="6:47" ph="..." />
-            <marker date="1564553056283" expanded="true" signature="80:975" ph="{...}" />
-            <marker date="1564553056283" expanded="true" signature="109:973" ph="{...}" />
-            <marker date="1564553056283" expanded="true" signature="618:693" ph="{...}" />
-            <marker date="1564553056283" expanded="true" signature="795:840" ph="{...}" />
-            <marker date="1564553056283" expanded="true" signature="872:892" ph="{...}" />
-            <marker date="1564553056283" expanded="true" signature="947:967" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Framework/ObjectPool/ObjectPool.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="123" lean-forward="true" selection-start-line="123" selection-end-line="123" />
+        <state relative-caret-position="596">
+          <caret line="130" column="53" lean-forward="true" selection-start-line="130" selection-start-column="53" selection-end-line="130" selection-end-column="53" />
           <folding>
             <marker date="1565252408169" expanded="false" signature="6:79" ph="..." />
             <marker date="1565252408169" expanded="true" signature="111:3482" ph="{...}" />
@@ -814,6 +767,39 @@
             <marker date="1565252408169" expanded="true" signature="3038:3113" ph="{...}" />
             <marker date="1565252408169" expanded="true" signature="3150:3340" ph="{...}" />
             <marker date="1565252408169" expanded="true" signature="3218:3326" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Framework/ResourceLoader/ResMgr.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <marker date="1564458919641" expanded="false" signature="6:60" ph="..." />
+            <marker date="1564458919641" expanded="true" signature="93:1023" ph="{...}" />
+            <marker date="1564458919641" expanded="true" signature="138:1021" ph="{...}" />
+            <marker date="1564458919641" expanded="true" signature="473:518" ph="{...}" />
+            <marker date="1564458919641" expanded="true" signature="621:672" ph="{...}" />
+            <marker date="1564458919641" expanded="true" signature="805:850" ph="{...}" />
+            <marker date="1564458919641" expanded="true" signature="881:914" ph="{...}" />
+            <marker date="1564458919641" expanded="true" signature="982:1015" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Framework/ResourceLoader/ResLoader.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="38" column="1" lean-forward="true" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
+          <folding>
+            <marker date="1564553056283" expanded="false" signature="6:47" ph="..." />
+            <marker date="1564553056283" expanded="true" signature="80:975" ph="{...}" />
+            <marker date="1564553056283" expanded="true" signature="109:973" ph="{...}" />
+            <marker date="1564553056283" expanded="true" signature="618:693" ph="{...}" />
+            <marker date="1564553056283" expanded="true" signature="795:840" ph="{...}" />
+            <marker date="1564553056283" expanded="true" signature="872:892" ph="{...}" />
+            <marker date="1564553056283" expanded="true" signature="947:967" ph="{...}" />
           </folding>
         </state>
       </provider>
