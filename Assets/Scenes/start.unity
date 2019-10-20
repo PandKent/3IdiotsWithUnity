@@ -156,12 +156,7 @@ MonoBehaviour:
   wnds:
   - wnd: 0
     prefab: {fileID: 213834357350050869, guid: 2f48ff68859ea0444bcc4d2aa971f162, type: 3}
-    exclusion: 2
-    layer: 2
-  - wnd: 1
-    prefab: {fileID: 8706422136925436288, guid: af81c91e6ea1a0b45adb696731ba7dfe,
-      type: 3}
-    exclusion: 2
+    exclusion: 1
     layer: 2
 --- !u!4 &127452678
 Transform:

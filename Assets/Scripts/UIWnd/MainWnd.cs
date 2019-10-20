@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Framework.UIFramework;
 using Framework.UIFramework.Enum;
 using UnityEngine;
@@ -19,11 +20,15 @@ namespace UIWndScripts
         public override void OnOpen(params object[] data)
         {
             Debug.Log("Main UI Opened");
+            Debug.Log(((object[])data[0])[0].ToString());
+            Debug.Log(((object[])data[0])[1].ToString());
+            Debug.Log(((object[])data[0])[2].ToString());
         }
 
         public override void OnClose(params object[] data)
         {
             Debug.Log("Main UI Closed");
+            UIMgr.Instance.OpenWnd(UIWndName.MainUI1,"AAA","BBB");
         }
     }
 }

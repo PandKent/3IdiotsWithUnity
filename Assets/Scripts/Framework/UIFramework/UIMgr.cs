@@ -97,19 +97,15 @@ namespace Framework.UIFramework
             }
 
             UIWnd wnd;
-            object data;
-
-            if (m_waitForOpen.Count == 0)
-            {
-                return;
-            }
-
-            if (m_wndPassData.Count == 0)
-            {
-                return;
-            }
+            object data = null;
+            
             wnd = m_waitForOpen.Dequeue();
-            data = m_wndPassData.Dequeue();
+            
+            if (m_wndPassData.Count != 0)
+            {
+                data = m_wndPassData.Dequeue();
+            }
+            
             wnd.OnBeforOpen(data);
 //            wnd.gameObject.SetActive(true);//数据加载成功后，显示界面 目前均为同步加载模式，后期改异步
             wnd.OnOpen(data);

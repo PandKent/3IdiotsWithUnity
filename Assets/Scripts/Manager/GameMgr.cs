@@ -15,9 +15,10 @@ namespace Singleton
 
         private void Init()
         {
-            UIMgr.Instance.OpenWnd(UIWndName.MainUI);
-            UIMgr.Instance.OpenWnd(UIWndName.MainUI1);
-            UIMgr.Instance.OpenWnd(UIWndName.MainUI);
+//            UIMgr.Instance.OpenWnd(UIWndName.MainUI);
+//            UIMgr.Instance.OpenWnd(UIWndName.MainUI1);
+//            UIMgr.Instance.OpenWnd(UIWndName.MainUI1);
+            UIMgr.Instance.OpenWnd(UIWndName.MainUI,"Hello World","Lao si NI hao","wo hao shuai");
         }
 
         private void Awake()

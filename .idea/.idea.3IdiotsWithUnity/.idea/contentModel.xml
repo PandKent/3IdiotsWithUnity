@@ -43,6 +43,7 @@
           <e p="Test.cs" t="Include" />
           <e p="UIWnd" t="Include">
             <e p="MainWnd.cs" t="Include" />
+            <e p="MainWnd1.cs" t="Include" />
           </e>
         </e>
       </e>
