@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Kent\.Rider2019.1\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Kent\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_3IdiotsWithUnity.1759151148.00" t="ExcludeRecursive" />
-    <e p="E:\Work\3IdiotsWithUnity" t="IncludeRecursive">
+    <e p="C:\Users\Raytine\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Raytine\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_3IdiotsWithUnity.925557519.00" t="ExcludeRecursive" />
+    <e p="E:\3IdiotsWithUnity" t="IncludeRecursive">
       <e p="3IdiotsWithUnity.sln" t="IncludeFlat" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -11,6 +11,14 @@
           <e p="Die.cs" t="Include" />
           <e p="FoodMaker.cs" t="Include" />
           <e p="Framework" t="Include">
+            <e p="ObjectPool" t="Include">
+              <e p="ObjectPool.cs" t="Include" />
+            </e>
+            <e p="ResourceLoader" t="Include">
+              <e p="IRes.cs" t="Include" />
+              <e p="ResLoader.cs" t="Include" />
+              <e p="ResMgr.cs" t="Include" />
+            </e>
             <e p="Singleton" t="Include">
               <e p="TSingleton.cs" t="Include" />
             </e>
@@ -18,10 +26,12 @@
               <e p="Enum" t="Include">
                 <e p="Enums.cs" t="Include" />
               </e>
-              <e p="UIDefine.cs" t="Include" />
-              <e p="UIMgr.cs" t="Include" />
-              <e p="UIRegister.cs" t="Include" />
-              <e p="UIWnd.cs" t="Include" />
+              <e p="UI" t="Include">
+                <e p="UIDefine.cs" t="Include" />
+                <e p="UIMgr.cs" t="Include" />
+                <e p="UIRegister.cs" t="Include" />
+                <e p="UIWnd.cs" t="Include" />
+              </e>
             </e>
           </e>
           <e p="Game" t="Include">
@@ -47,9 +57,12 @@
           </e>
         </e>
       </e>
+      <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
-      <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
     </e>
   </component>
 </project>
